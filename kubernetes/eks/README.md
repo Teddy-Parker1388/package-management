@@ -16,5 +16,17 @@ curl --silent --location "https://github.com/weaveworks/eksctl/releases/latest/d
 
 sudo mv /tmp/eksctl /usr/local/bin
 
-eksctl version`
+eksctl version
+```
+
+### INSTALL KUBECTL
+```
+sudo curl --silent --location -o /usr/local/bin/kubectl   https://s3.us-west-2.amazonaws.com/amazon-eks/1.22.6/2022-03-09/bin/linux/amd64/kubectl
+
+
+sudo chmod +x /usr/local/bin/kubectl 
+
+#Verify if kubectl got installed
+
+kubectl version --short --client
 ```
