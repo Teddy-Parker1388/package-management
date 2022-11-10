@@ -30,3 +30,14 @@ sudo chmod +x /usr/local/bin/kubectl
 
 kubectl version --short --client
 ```
+### ATTACH ADMINISTRATOR ACCESS IAM ROLE TO EC2 INSTANCE
+
+### CREATE K8 CLUSTER
+```
+eksctl create cluster --name demo-eks --region us-east-2 --nodegroup-name my-nodes --node-type t3.small --managed --nodes 2 
+
+eksctl get cluster --name demo-eks --region us-east-2 
+#This should confirm that EKS cluster is up and running.
+
+aws eks update-kubeconfig --name demo-eks --region us-east-2
+```
