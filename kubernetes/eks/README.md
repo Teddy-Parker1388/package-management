@@ -31,6 +31,8 @@ sudo chmod +x /usr/local/bin/kubectl
 kubectl version --short --client
 ```
 ### ATTACH ADMINISTRATOR ACCESS IAM ROLE TO EC2 INSTANCE
++ Create Admin Access IAM Role in AWS Console
++ Attach to EC2 Instance
 
 ### CREATE K8 CLUSTER
 ```
