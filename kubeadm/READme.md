@@ -4,7 +4,7 @@
 
 
 
-## Kubernetes Setup Using Kubeadm In AWS EC2 Ubuntu Serverse.
+## Kubernetes Setup Using Kubeadm In AWS EC2 Ubuntu Servers.
 ##### Prerequisite
 + AWS Acccount.
 + Create 3 - Ubuntu Servers -- 18.04.
@@ -15,8 +15,10 @@
 + Attach Security Group to EC2 Instance/nodes.
 
 ## Assign hostname &  login as ‘root’ user because the following set of commands need to be executed with ‘sudo’ permissions.
+```sh
 sudo hostnamectl set-hostname master
 sudo -i
+```
 
 ``` sh
 # run the following below as a script
@@ -96,6 +98,7 @@ kubectl get node
 kubeadm join 172.31.10.12:6443 --token cdm6fo.dhbrxyleqe5suy6e \
         --discovery-token-ca-cert-hash sha256:1fc51686afd16c46102c018acb71ef9537c1226e331840e7d401630b96298e7d
 ```
+
 
 
 
